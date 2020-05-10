@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductTable ProductTable rendered successfully! 1`] = `
+<Memo(ProductTable)
+  data={
+    Array [
+      Object {
+        "category": "Sporting Goods",
+        "name": "Basketball",
+        "price": "$29.99",
+        "stocked": false,
+      },
+      Object {
+        "category": "Electronics",
+        "name": "iPod Touch",
+        "price": "$99.99",
+        "stocked": true,
+      },
+    ]
+  }
+>
+  <table>
+    <thead>
+      <tr>
+        <th
+          id="nameHeader"
+        >
+          Name
+        </th>
+        <th
+          id="priceHeader"
+        >
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <Memo(ProductCategoryRow)
+          category="Sporting Goods"
+        >
+          <th
+            colSpan="2"
+            id="categoryHeader"
+          >
+            Sporting Goods
+          </th>
+        </Memo(ProductCategoryRow)>
+      </tr>
+      <tr
+        key="Basketball"
+      >
+        <Memo(ProductRow)
+          data={
+            Object {
+              "category": "Sporting Goods",
+              "name": "Basketball",
+              "price": "$29.99",
+              "stocked": false,
+            }
+          }
+        >
+          <td
+            id="dataName"
+          >
+            Basketball
+          </td>
+          <td
+            id="dataPrice"
+          >
+            $29.99
+          </td>
+        </Memo(ProductRow)>
+      </tr>
+      <tr>
+        <Memo(ProductCategoryRow)
+          category="Electronics"
+        >
+          <th
+            colSpan="2"
+            id="categoryHeader"
+          >
+            Electronics
+          </th>
+        </Memo(ProductCategoryRow)>
+      </tr>
+      <tr
+        key="iPod Touch"
+      >
+        <Memo(ProductRow)
+          data={
+            Object {
+              "category": "Electronics",
+              "name": "iPod Touch",
+              "price": "$99.99",
+              "stocked": true,
+            }
+          }
+        >
+          <td
+            id="dataName"
+          >
+            iPod Touch
+          </td>
+          <td
+            id="dataPrice"
+          >
+            $99.99
+          </td>
+        </Memo(ProductRow)>
+      </tr>
+    </tbody>
+  </table>
+</Memo(ProductTable)>
+`;

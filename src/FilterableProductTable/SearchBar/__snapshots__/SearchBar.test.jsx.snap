@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar SearchBar rendered successfully 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Memo(SearchBar)>
+    <input
+      id="filterText"
+      name="filterText"
+      onChange={[Function]}
+      placeholder="Search product..."
+      type="text"
+      value=""
+    />
+    <br />
+    <input
+      checked={false}
+      id="isStockOnly"
+      name="isStockOnly"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      id="isStockOnlyLabel"
+    >
+      Only show product in stock
+    </span>
+  </Memo(SearchBar)>
+</Provider>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductRow ProductRow rendered successfully! 1`] = `
+<Memo(ProductRow)
+  data={
+    Object {
+      "category": "Food",
+      "name": "Apple",
+      "price": "$10",
+      "stocked": true,
+    }
+  }
+>
+  <td
+    id="dataName"
+  >
+    Apple
+  </td>
+  <td
+    id="dataPrice"
+  >
+    $10
+  </td>
+</Memo(ProductRow)>
+`;

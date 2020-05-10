@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCategoryRow ProductCategoryRow rendered successfully! 1`] = `
+<Memo(ProductCategoryRow)
+  category="Hello"
+>
+  <th
+    colSpan="2"
+    id="categoryHeader"
+  >
+    Hello
+  </th>
+</Memo(ProductCategoryRow)>
+`;

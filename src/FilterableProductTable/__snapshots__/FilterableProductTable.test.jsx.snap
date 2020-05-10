@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterableProduct FilterableProductTable rendered successfully! 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Memo(FilterableProductTable)>
+    <Memo(SearchBar)>
+      <input
+        id="filterText"
+        name="filterText"
+        onChange={[Function]}
+        placeholder="Search product..."
+        type="text"
+        value=""
+      />
+      <br />
+      <input
+        checked={false}
+        id="isStockOnly"
+        name="isStockOnly"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        id="isStockOnlyLabel"
+      >
+        Only show product in stock
+      </span>
+    </Memo(SearchBar)>
+    <Memo(ProductTable)
+      data={
+        Array [
+          Object {
+            "category": "Sporting Goods",
+            "name": "Football",
+            "price": "$49.99",
+            "stocked": true,
+          },
+          Object {
+            "category": "Sporting Goods",
+            "name": "Baseball",
+            "price": "$9.99",
+            "stocked": true,
+          },
+          Object {
+            "category": "Sporting Goods",
+            "name": "Basketball",
+            "price": "$29.99",
+            "stocked": false,
+          },
+          Object {
+            "category": "Electronics",
+            "name": "iPod Touch",
+            "price": "$99.99",
+            "stocked": true,
+          },
+          Object {
+            "category": "Electronics",
+            "name": "iPhone 5",
+            "price": "$399.99",
+            "stocked": false,
+          },
+          Object {
+            "category": "Electronics",
+            "name": "Nexus 7",
+            "price": "$199.99",
+            "stocked": true,
+          },
+        ]
+      }
+    >
+      <table>
+        <thead>
+          <tr>
+            <th
+              id="nameHeader"
+            >
+              Name
+            </th>
+            <th
+              id="priceHeader"
+            >
+              Price
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <Memo(ProductCategoryRow)
+              category="Sporting Goods"
+            >
+              <th
+                colSpan="2"
+                id="categoryHeader"
+              >
+                Sporting Goods
+              </th>
+            </Memo(ProductCategoryRow)>
+          </tr>
+          <tr
+            key="Football"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Sporting Goods",
+                  "name": "Football",
+                  "price": "$49.99",
+                  "stocked": true,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                Football
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $49.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+          <tr
+            key="Baseball"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Sporting Goods",
+                  "name": "Baseball",
+                  "price": "$9.99",
+                  "stocked": true,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                Baseball
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $9.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+          <tr
+            key="Basketball"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Sporting Goods",
+                  "name": "Basketball",
+                  "price": "$29.99",
+                  "stocked": false,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                Basketball
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $29.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+          <tr>
+            <Memo(ProductCategoryRow)
+              category="Electronics"
+            >
+              <th
+                colSpan="2"
+                id="categoryHeader"
+              >
+                Electronics
+              </th>
+            </Memo(ProductCategoryRow)>
+          </tr>
+          <tr
+            key="iPod Touch"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Electronics",
+                  "name": "iPod Touch",
+                  "price": "$99.99",
+                  "stocked": true,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                iPod Touch
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $99.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+          <tr
+            key="iPhone 5"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Electronics",
+                  "name": "iPhone 5",
+                  "price": "$399.99",
+                  "stocked": false,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                iPhone 5
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $399.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+          <tr
+            key="Nexus 7"
+          >
+            <Memo(ProductRow)
+              data={
+                Object {
+                  "category": "Electronics",
+                  "name": "Nexus 7",
+                  "price": "$199.99",
+                  "stocked": true,
+                }
+              }
+            >
+              <td
+                id="dataName"
+              >
+                Nexus 7
+              </td>
+              <td
+                id="dataPrice"
+              >
+                $199.99
+              </td>
+            </Memo(ProductRow)>
+          </tr>
+        </tbody>
+      </table>
+    </Memo(ProductTable)>
+  </Memo(FilterableProductTable)>
+</Provider>
+`;
