@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import axios from 'axios';
 import { mount } from 'enzyme';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -10,13 +11,15 @@ import SearchBar from './SearchBar/SearchBar';
 
 const data = Mockdata;
 const store = Store;
+jest.mock('axios');
+axios.get.mockImplementation(() => Promise.resolve(data));
 const wrapper = mount(
   <Provider store={store}>
     <FilterableProductTable />
   </Provider>,
 );
 
-describe('FilterableProduct', () => {
+describe('FilterableProductTable', () => {
   it('FilterableProductTable rendered successfully!', () => {
     expect(wrapper).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilterableProduct FilterableProductTable rendered successfully! 1`] = `
+exports[`FilterableProductTable FilterableProductTable rendered successfully! 1`] = `
 <Provider
   store={
     Object {

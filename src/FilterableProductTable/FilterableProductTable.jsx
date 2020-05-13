@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { memo, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MockData from './MockData/MockData';
@@ -6,20 +7,22 @@ import { handleCleanUpSearchBarReducer } from './Redux/SearchBarReducer/Actions/
 import SearchBar from './SearchBar/SearchBar';
 
 const FilterableProductTable = () => {
-  const [filteredData, setFilteredData] = useState(MockData);
+  const [filteredData, setFilteredData] = useState();
   const dispatch = useDispatch();
   const filterText = useSelector((state) => state.SearchBarReducer.filterText);
   const isStockOnly = useSelector(
     (state) => state.SearchBarReducer.isStockOnly,
   );
 
-  useEffect(
-    () => () => {
+  useEffect(() => {
+    axios.get('').then((response) => {
+      setFilteredData(response.data);
+    });
+    return () => {
       dispatch(handleCleanUpSearchBarReducer());
-    },
+    };
     // eslint-disable-next-line
-    []
-  );
+  }, []);
 
   useEffect(() => {
     if (filterText !== '' && isStockOnly) {
@@ -45,7 +48,7 @@ const FilterableProductTable = () => {
   return (
     <>
       <SearchBar />
-      <ProductTable data={filteredData} />
+      {filteredData && <ProductTable data={filteredData} />}
     </>
   );
 };
