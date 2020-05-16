@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "npm run lint && npm run test:coverage",
-    "build": "react-scripts build -- --profile",
+    "build": "react-scripts build --profile",
     "test": "react-scripts test",
     "lint": "eslint . --ext .jsx",
     "test:coverage": "set CI=true && react-scripts test --coverage",
