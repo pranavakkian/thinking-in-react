@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { memo, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import MockData from './MockData/MockData';
 import ProductTable from './ProductTable/ProductTable';
 import { handleCleanUpSearchBarReducer } from './Redux/SearchBarReducer/Actions/Actions';
 import SearchBar from './SearchBar/SearchBar';
 
 const FilterableProductTable = () => {
+  const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState();
   const dispatch = useDispatch();
   const filterText = useSelector((state) => state.SearchBarReducer.filterText);
@@ -16,6 +16,7 @@ const FilterableProductTable = () => {
 
   useEffect(() => {
     axios.get('').then((response) => {
+      setData(response.data);
       setFilteredData(response.data);
     });
     return () => {
@@ -27,7 +28,7 @@ const FilterableProductTable = () => {
   useEffect(() => {
     if (filterText !== '' && isStockOnly) {
       setFilteredData(
-        MockData.filter(
+        data.filter(
           (item) => item.name.toLocaleLowerCase().includes(filterText)
             /* istanbul ignore next */
             && item.stocked,
@@ -35,12 +36,12 @@ const FilterableProductTable = () => {
       );
     } else if (filterText !== '' && !isStockOnly) {
       setFilteredData(
-        MockData.filter((item) => item.name.toLowerCase().includes(filterText)),
+        data.filter((item) => item.name.toLowerCase().includes(filterText)),
       );
     } else if (filterText === '' && isStockOnly) {
-      setFilteredData(MockData.filter((item) => item.stocked));
+      setFilteredData(data.filter((item) => item.stocked));
     } else {
-      setFilteredData(MockData);
+      setFilteredData(data);
     }
     // eslint-disable-next-line
   }, [filterText, isStockOnly]);

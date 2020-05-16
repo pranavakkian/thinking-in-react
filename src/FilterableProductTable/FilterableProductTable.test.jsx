@@ -9,10 +9,10 @@ import Mockdata from './MockData/MockData';
 import ProductTable from './ProductTable/ProductTable';
 import SearchBar from './SearchBar/SearchBar';
 
-const data = Mockdata;
+const { data } = Mockdata;
 const store = Store;
 jest.mock('axios');
-axios.get.mockImplementation(() => Promise.resolve(data));
+axios.get.mockImplementation(() => Promise.resolve(Mockdata));
 const wrapper = mount(
   <Provider store={store}>
     <FilterableProductTable />
@@ -21,6 +21,7 @@ const wrapper = mount(
 
 describe('FilterableProductTable', () => {
   it('FilterableProductTable rendered successfully!', () => {
+    wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
 
